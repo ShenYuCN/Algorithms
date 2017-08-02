@@ -4,6 +4,7 @@
  *
  *
  *
+ *
  * 643
  Given an array consisting of n integers, find the contiguous subarray of given length k
  that has the maximum average value. And you need to output the maximum average value.
@@ -28,6 +29,13 @@ public class Maximum_Average_Subarray_I {
         System.out.println("slidingWindow:" + slidingWindow(ss,4));
     }
 
+    /*
+    *
+    *  Time complexity   O(n)
+    *  Space complexity O(1)
+    *
+    *  累加新的一组四个数和时，加第5个数，减第1个数
+    * */
     public  static  double slidingWindow(int[] nums,int k){
         int sum = 0;
         for (int i = 0; i < k; i++){
@@ -44,8 +52,11 @@ public class Maximum_Average_Subarray_I {
 
     /*
      *
-     *  Time complexity   O( n)
+     *  Time complexity   O(n)
      *  Space complexity O(n)
+     *
+     *   建一个新的数组，长度和原数组一样，每个元素为之前 n 个数的和
+     *
      *
      * */
     public static double CumulativeSum(int[] nums, int k) {
@@ -62,17 +73,6 @@ public class Maximum_Average_Subarray_I {
         }
         return res;
 
-
-//        int[] sum = new int[nums.length];
-//        sum[0] = nums[0];
-//        for (int i = 1; i < nums.length; i++)
-//            sum[i] = sum[i - 1] + nums[i];
-//        double res = sum[k - 1] * 1.0 / k;
-//        for (int i = k; i < nums.length; i++) {
-//            res = Math.max(res, (sum[i] - sum[i - k]) * 1.0 / k);
-//        }
-//        return res;
-
     }
 
 
@@ -82,6 +82,7 @@ public class Maximum_Average_Subarray_I {
     *  Time complexity   O(k * n)
     *  Space complexity O(1)
     *
+    *  遍历n-k 次，每次计算k个数的和
     * */
     public static double BruteForce(int[] nums, int k) {
         double res = Integer.MIN_VALUE;
