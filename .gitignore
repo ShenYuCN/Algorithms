@@ -1,5 +1,6 @@
+misc.xml
+workspace.xml
 *.xml
 *.class
 *.iml
-*.xml
 *.name
