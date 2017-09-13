@@ -50,6 +50,8 @@ public class Maximum_Product_of_ThreeNumbers {
 
 
 
+
+
     /**
     *
     *  min1,min2    ******   max3, max2,max1
@@ -69,6 +71,8 @@ public class Maximum_Product_of_ThreeNumbers {
                 min2 = x;
             }
 
+
+            
 
             if (x > max1){
                 max3 = max2;
