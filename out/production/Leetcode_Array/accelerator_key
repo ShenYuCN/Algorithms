@@ -1,0 +1,48 @@
+intelliji 快捷键
+
+
+command+D : 复制一行
+
+command+X :剪切删除行
+
+command+alt+L :格式化代码
+
+command+alt+I : 自动缩进，不 用多次使用tab或着backspace键，也是比较方便的
+
+shift+enter : 换到下一行
+
+command+alt+左右箭头 : 返回上次编辑的位置
+
+command+shift+上下箭头 : 把代码上移或着下移
+
+
+
+ctrl+shift+space :代码补全，这个会判断可能用到的，这个代码补全和代码提示是不一样的
+
+command+P : 方法参数提示
+
+command+G : 定位
+
+command+J : 可以生成一些自动代码，比如for循环
+
+command+Y : 查看当前方法实现
+
+command+shift+N : 查找文件
+
+command+N : 查找类
+
+command+R : 替换
+
+shift+f6 :重命名
+
+ctrl+shift+f9 debug :运行Java类
+ctrl+shift+f10 :正常运行java类
+command+f2 :停止运行
+
+
+
+
+
+command+/ :注释一行或着多行 //
+
+ctrl+shift+/ : 注释/…/
