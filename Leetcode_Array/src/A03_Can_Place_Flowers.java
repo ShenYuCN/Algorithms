@@ -21,7 +21,7 @@
 
 
  */
-public class Can_Place_Flowers {
+public class A03_Can_Place_Flowers {
 
 
     public static void main(String args[]) {

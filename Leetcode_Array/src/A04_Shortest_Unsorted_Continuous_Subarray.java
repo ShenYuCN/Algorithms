@@ -21,7 +21,7 @@ import java.util.Stack;
  *
  * 这个题注意特殊情况， 数组元素只有一个，或者已经是升序的数组
  */
-public class Shortest_Unsorted_Continuous_Subarray {
+public class A04_Shortest_Unsorted_Continuous_Subarray {
 
     public static void main(String args[]) {
 
@@ -87,6 +87,13 @@ public class Shortest_Unsorted_Continuous_Subarray {
     }
 
 
+    /**
+     *  使用栈
+     *
+     *
+     *   Time  complexity:  O(n) Stack of size
+     *   Space complexity: O(n). Stack size grows upto n
+    */
     public static int useStack(int[] nums) {
 
 
@@ -97,7 +104,7 @@ public class Shortest_Unsorted_Continuous_Subarray {
                 l = Math.min(l, stack.pop());
             stack.push(i);
         }
-        System.out.println(stack);
+
         stack.clear();
         for (int i = nums.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && nums[stack.peek()] < nums[i])
@@ -116,33 +123,6 @@ public class Shortest_Unsorted_Continuous_Subarray {
      * Time  complexity:O(n)  Four O(n) loops are used.
      * Space complexity:O(1)
      */
-    public static int findUnsortedSubarray_2(int[] nums) {
-        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-        boolean flag = false;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < nums[i - 1])
-                flag = true;
-            if (flag)
-                min = Math.min(min, nums[i]);
-        }
-        flag = false;
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if (nums[i] > nums[i + 1])
-                flag = true;
-            if (flag)
-                max = Math.max(max, nums[i]);
-        }
-        int l, r;
-        for (l = 0; l < nums.length; l++) {
-            if (min < nums[l])
-                break;
-        }
-        for (r = nums.length - 1; r >= 0; r--) {
-            if (max > nums[r])
-                break;
-        }
-        return r - l < 0 ? 0 : r - l + 1;
-    }
 
     public static int four(int[] nums) {
 

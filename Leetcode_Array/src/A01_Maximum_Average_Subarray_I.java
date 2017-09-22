@@ -17,7 +17,7 @@
 
 
  */
-public class Maximum_Average_Subarray_I {
+public class A01_Maximum_Average_Subarray_I {
 
 
     public static void main(String args[]) {

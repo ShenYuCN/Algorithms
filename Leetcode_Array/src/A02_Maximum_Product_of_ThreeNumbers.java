@@ -21,7 +21,7 @@ import java.util.Arrays;
  adjective
  迭代的
  */
-public class Maximum_Product_of_ThreeNumbers {
+public class A02_Maximum_Product_of_ThreeNumbers {
 
     public static void main(String args[]) {
 
