@@ -18,9 +18,10 @@ import java.util.Map;
 public class A06_Two_Sum {
     public static void main(String args[]) {
 
-        int[] nums = {2, 7, 11, 15};
+        int[] nums = {2, 2, 11, 15};
         System.out.println(Arrays.toString(s_twoSum(nums, 9)));
         System.out.println(Arrays.toString(hashTable(nums, 9)));
+        System.out.println(Arrays.toString(hashTable_2(nums, 9)));
 
     }
 
@@ -49,6 +50,7 @@ public class A06_Two_Sum {
     /**
      *
      *      Hash Table
+     *      Hash表有通过key取value的命令，没有通过value取key的命令，而最终要输出原数组的索引，因此在此方法中，将索引设置为value更合适
      *
      *   Time  complexity:O(n)
      *   Space complexity:O(n)
@@ -65,6 +67,21 @@ public class A06_Two_Sum {
                 return new  int[] {i,map.get(complement)};
             }
         }
+
+        throw new IllegalArgumentException("No solution");
+    }
+
+
+    public  static  int[] hashTable_2(int[]nums,int target){
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++){
+            int complement = target - nums[i];
+            if (map.containsKey(complement) && i != map.get(complement)){
+                return new  int[] {map.get(complement),i};
+            }
+            map.put(nums[i],i);
+        }
+
 
         throw new IllegalArgumentException("No solution");
     }
