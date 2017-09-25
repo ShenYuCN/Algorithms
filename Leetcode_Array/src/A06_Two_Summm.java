@@ -15,10 +15,10 @@ import java.util.Map;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class A06_Two_Sum {
+public class A06_Two_Summm {
     public static void main(String args[]) {
 
-        int[] nums = {2, 2, 11, 15};
+        int[] nums = {2, 7, 11, 15};
         System.out.println(Arrays.toString(s_twoSum(nums, 9)));
         System.out.println(Arrays.toString(hashTable(nums, 9)));
         System.out.println(Arrays.toString(hashTable_2(nums, 9)));
