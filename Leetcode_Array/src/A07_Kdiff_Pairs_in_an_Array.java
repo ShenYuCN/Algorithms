@@ -30,24 +30,39 @@ public class A07_Kdiff_Pairs_in_an_Array {
 
     public static void main(String args[]) {
 
-        int[] nums = {1, 3, 1, 15};
-        System.out.println((kdiff(nums, 2)));
+//        int[] nums = {1, 3, 1, 15};
+        int[] nums = {3, 1, 4, 1, 5};
+//        System.out.println((kdiff(nums, 2)));
+        System.out.println((kdiff(nums, 0)));
 
     }
     public  static  int  kdiff(int[] nums,int k){
-        if (nums == null || nums.length == 0 || k < 0)
+        if ( k < 0)
             return 0;
         Map<Integer, Integer> map = new HashMap<>();
         int i = 0;
         for (int num : nums)
             map.put(num, i++);
+        System.out.print("map:"+ map.toString() + "\n");
+
         int res = 0;
-        for (i = 0; i < nums.length; i++)
-            // map.get(nums[i] + k) != i避免nums[i] + k也在nums.length之内的情况,
+        for (i = 0; i < nums.length; i++) {
+
+            int newKey = nums[i] + k;
+            System.out.print("newKey:"+ newKey + "\n");
+
+            if (map.containsKey(newKey)){
+                System.out.print("key:"+ newKey + " value:"+ map.get(newKey) + "\n");
+            }
+
+            // map.get(nums[i] + k) != i 是为了避免K=0，即找相同数的情况
+            // 当存在相同的key时，map会将后面的key替换前面相同的key，从而导致位置上key不变但是value向后位移
+            // 正常情况下，K为0时，map.get(nums[i] + k) == i，因为他们是对应的关系，但是这种关系只是一个个体值，不能满足pairs要求
             if (map.containsKey(nums[i] + k) && map.get(nums[i] + k) != i) {
                 map.remove(nums[i] + k);
                 res++;
             }
+        }
         return res;
 
 
