@@ -67,6 +67,7 @@ public class A01_Maximum_Average_Subarray_I {
             sum[i] += nums[i] + sum[i - 1];
         }
 
+
         double res = sum[k - 1] * 1.0 / k;
         for (int i = k; i < nums.length; i++) {
             res = Math.max(res, (sum[i] - sum[i - k]) * 1.0 / k);
