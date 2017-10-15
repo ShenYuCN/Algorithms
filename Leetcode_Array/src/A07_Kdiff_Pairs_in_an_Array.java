@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by happiness on 17/10/10.
@@ -35,7 +36,12 @@ public class A07_Kdiff_Pairs_in_an_Array {
 //        System.out.println((kdiff(nums, 2)));
         System.out.println((kdiff(nums, 0)));
 
+        findPairs(nums,0);
+
     }
+
+
+
     public  static  int  kdiff(int[] nums,int k){
         if ( k < 0)
             return 0;
@@ -69,6 +75,9 @@ public class A07_Kdiff_Pairs_in_an_Array {
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
+
+        System.out.println(map);
+        Set<Integer> set = map.keySet();
 
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (k == 0) {
