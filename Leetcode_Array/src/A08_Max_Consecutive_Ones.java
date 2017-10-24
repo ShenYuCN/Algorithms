@@ -28,13 +28,19 @@ public class A08_Max_Consecutive_Ones {
     public static int findMaxConsecutiveOnes(int[] nums) {
 
         int now = 0;
-        int res = 0;
-        for (int num:nums){
-            if (num == 1) now++;
+        int max = 0;
+        for (int n:nums){
+            max = Math.max(max,now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，不能是i++
+
+
+            /*  解释：
+            if (n == 1) now++;
             else now = 0;
-            res = Math.max(res,now);
+            res = Math.max(max,now);
+            */
         }
-        return res;
+        return max;
+
 
     }
 
