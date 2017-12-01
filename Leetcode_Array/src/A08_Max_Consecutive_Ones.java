@@ -30,8 +30,8 @@ public class A08_Max_Consecutive_Ones {
         int now = 0;
         int max = 0;
         for (int n:nums){
-            max = Math.max(max,now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，不能是i++
-
+            max = Math.max(max,now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，不能是i++,或者是 now + 1
+            max = Math.max(max,now = n == 1 ? now + 1: 0);
 
             /*  解释：
             if (n == 1) now++;
