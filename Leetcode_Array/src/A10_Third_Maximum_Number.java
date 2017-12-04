@@ -28,6 +28,10 @@
  */
 
 
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
+
 /**
  *
  *     题目要求是  O(n) 时间复杂度
@@ -72,6 +76,18 @@ public class A10_Third_Maximum_Number {
     }
 
 
+    public static int solution_Two (int[] nums) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        Set<Integer> set = new HashSet<>();
+        for(int n : nums) {
+            if(set.add(n)) {
+                pq.offer(n);
+                if(pq.size() > 3 ) pq.poll();
+            }
+        }
+        if(pq.size() == 2) pq.poll();
+        return pq.peek();
+    }
     /**
      *
      *   这个方法有个缺陷是默认最低为 Integer.MIN_VALUE

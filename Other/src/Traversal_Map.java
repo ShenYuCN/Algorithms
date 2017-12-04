@@ -5,6 +5,10 @@ import java.util.Set;
 
 /**
  * Created by happiness on 17/10/15.
+ *
+ *
+ Set<String> sets2 = maps.keySet();
+maps.values()   // map的所有值,重复的也在
  */
 public class Traversal_Map {
     public static void main(String[] args) {
@@ -27,15 +31,17 @@ public class Traversal_Map {
     }
     private static void strongForMethod1(Map<String, String> maps) {
 
+//        for (String key : maps.keySet())
         Set<String> set = maps.keySet();
         for (String key : set){
             System.out.println("key: " + key + "  value:" + maps.get(key));
         }
     }
+
+    //  推荐，尤其是容量大时
     private static void strongForMethod2(Map<String, String> maps) {
 
         Set<Map.Entry<String,String>> set = maps.entrySet();
-
         for (Map.Entry<String,String> entry:set){
             System.out.println(entry.getKey()+ ":" + entry.getValue());
         }
