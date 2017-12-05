@@ -66,7 +66,7 @@ public class A11_Move_Zeroes {
         int index = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0){
-                queue.add(nums[i]);
+                queue.offer(nums[i]);
                 index++;
             }
         }
