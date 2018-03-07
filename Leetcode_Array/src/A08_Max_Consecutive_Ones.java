@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,13 +31,19 @@ public class A08_Max_Consecutive_Ones {
         Map<Integer,Integer> map  = new HashMap<>();
 
         int now = 0;
-        int res = 0;
-        for (int num:nums){
-            if (num == 1) now++;
+        int max = 0;
+        for (int n:nums){
+            max = Math.max(max,now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，不能是i++,或者是 now + 1
+            max = Math.max(max,now = n == 1 ? now + 1: 0);
+
+            /*  解释：
+            if (n == 1) now++;
             else now = 0;
-            res = Math.max(res,now);
+            res = Math.max(max,now);
+            */
         }
-        return res;
+        return max;
+
 
     }
 

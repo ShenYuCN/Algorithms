@@ -19,3 +19,8 @@ A06_Two_Sum
 A07_Kdiff_Pairs_in_an_Array
 
 
+
+
+
+Array打印： sys...println(  Array.toString(arr) )
+Map打印：  sn ( map ) 或者 sn( map.toString )
