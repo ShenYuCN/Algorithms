@@ -23,11 +23,9 @@
       <file leaf-file-name="A08_Max_Consecutive_Ones.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/A08_Max_Consecutive_Ones.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,10 +33,10 @@
       <file leaf-file-name="A07_Kdiff_Pairs_in_an_Array.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/A07_Kdiff_Pairs_in_an_Array.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="544">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1520426808000" expanded="true" signature="7:72" ph="..." />
               </folding>
             </state>
           </provider>
@@ -57,8 +55,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="1547">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +78,20 @@
         <entry file="file://$PROJECT_DIR$/src/A04_Shortest_Unsorted_Continuous_Subarray.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1870">
-              <caret line="112" column="9" lean-forward="false" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-              <folding />
+              <caret line="114" column="9" lean-forward="false" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+              <folding>
+                <marker date="1520426808000" expanded="true" signature="878:1309" ph="{...}" />
+                <marker date="1520426808000" expanded="true" signature="881:1069" ph="//..." />
+                <marker date="1520426808000" expanded="true" signature="1108:1265" ph="//..." />
+                <marker date="1520426808000" expanded="true" signature="1316:1465" ph="/**...*/" />
+                <marker date="1520426808000" expanded="true" signature="1528:1900" ph="{...}" />
+                <marker date="1520426808000" expanded="true" signature="1906:2043" ph="/**...*/" />
+                <marker date="1520426808000" expanded="true" signature="2086:2493" ph="{...}" />
+                <marker date="1520426808000" expanded="true" signature="2500:2640" ph="/**...*/" />
+                <marker date="1520426808000" expanded="true" signature="2684:3254" ph="{...}" />
+                <marker date="1520426808000" expanded="true" signature="3260:3431" ph="/**...*/" />
+                <marker date="1520426808000" expanded="true" signature="3472:4310" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,8 +219,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +249,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -812,11 +822,12 @@
       <workItem from="1508476410204" duration="501000" />
       <workItem from="1508515510796" duration="13000" />
       <workItem from="1518580275468" duration="5087000" />
+      <workItem from="1520435291266" duration="205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35453000" />
+    <option name="totallyTimeSpent" value="35658000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -845,7 +856,6 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31678832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -857,7 +867,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21636952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21961102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -872,6 +882,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31678832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -931,7 +942,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="112" column="9" lean-forward="false" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1520426808000" expanded="true" signature="878:1309" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="881:1069" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1108:1265" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1316:1465" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="1528:1900" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="1906:2043" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2086:2493" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="2500:2640" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2684:3254" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="3260:3431" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="3472:4310" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -974,7 +997,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="50" />
-          <folding />
+          <folding>
+            <marker date="1520426808000" expanded="true" signature="878:1309" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="881:1069" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1108:1265" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1316:1465" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="1528:1900" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="1906:2043" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2086:2493" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="2500:2640" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2684:3254" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="3260:3431" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="3472:4310" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,11 +1261,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/A08_Max_Consecutive_Ones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,6 +1272,26 @@
         <state relative-caret-position="119">
           <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A07_Kdiff_Pairs_in_an_Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1520426808000" expanded="true" signature="7:72" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,27 +1306,19 @@
     <entry file="file://$PROJECT_DIR$/src/A04_Shortest_Unsorted_Continuous_Subarray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
-          <caret line="112" column="9" lean-forward="false" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A07_Kdiff_Pairs_in_an_Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
+          <caret line="114" column="9" lean-forward="false" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1520426808000" expanded="true" signature="878:1309" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="881:1069" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1108:1265" ph="//..." />
+            <marker date="1520426808000" expanded="true" signature="1316:1465" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="1528:1900" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="1906:2043" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2086:2493" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="2500:2640" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="2684:3254" ph="{...}" />
+            <marker date="1520426808000" expanded="true" signature="3260:3431" ph="/**...*/" />
+            <marker date="1520426808000" expanded="true" signature="3472:4310" ph="{...}" />
           </folding>
         </state>
       </provider>
