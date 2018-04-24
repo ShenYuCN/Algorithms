@@ -30,26 +30,29 @@ public class BubbleSort {
      *
      *  冒泡排序思想，相邻的比较，小的往上飘
      *  n-1,n-2,n-3....1
+     *
+     *  和 第一种方法类似，只是第二层循环一个是从后往前一个是从前往后
      *   Time  complexity:
      *   Space complexity:
     */
     public static void bubble_two(int[] nums) {
 
         for (int i = 0; i < nums.length; i++) {
-            //System.out.println(" \n 外 开始-----:" + i + Arrays.toString(nums));
+            System.out.println(" \n 外 开始-----:" + i + Arrays.toString(nums));
 
-            for (int j = nums.length - 1; j > i; j--) { // for循环从后面开始加，最终把最小的放最前面
-                if (nums[j] < nums[j - 1]) {
+            for (int j = nums.length - 1; j > i; j--) { // for循环从后面开始加，最终把最小的放最前面:  这里仅仅控制排序是从小到大还是从大到小
+                if (nums[j] > nums[j - 1]) {
                     int tmp = nums[j];
                     nums[j] = nums[j - 1];
                     nums[j - 1] = tmp;
                 }
-                //System.out.println("第N次内循环:" + nums[j] +" : " + nums[j -1]+ "\n " + Arrays.toString(nums));
+                System.out.println("第N次内循环:" + nums[j] +" : " + nums[j -1]+ "\n " + Arrays.toString(nums));
             }
         }
 
 
-        //System.out.println("排序之后:" + Arrays.toString(nums));
+        System.out.println("排序之后:" + Arrays.toString(nums));
+
 
     }
 
@@ -86,9 +89,8 @@ public class BubbleSort {
 
     }
 
-
     /**
-     * 交换排序
+     * 选择排序
      * <p/>
      * n-1,n-2,n-3....1
      * Time  complexity:
@@ -100,7 +102,7 @@ public class BubbleSort {
             System.out.println("第N次外循环开始-----:" + i);
 
             for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] < nums[j]) {   // for循环从0开始加，最终把最大或者最小的放最后面
+                if (nums[i] < nums[j]) {   // 注意和冒泡排序的区别，这里是i和j比较。
                     int tmp = nums[i];
                     nums[i] = nums[j];
                     nums[j] = tmp;
@@ -113,6 +115,8 @@ public class BubbleSort {
         System.out.println("排序之后:" + Arrays.toString(nums));
 
     }
+
+
 
 
 }

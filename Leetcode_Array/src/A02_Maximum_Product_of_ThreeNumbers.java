@@ -37,7 +37,7 @@ public class A02_Maximum_Product_of_ThreeNumbers {
     *
     *  sort 方法为快速排序
     *
-    *   Time  complexity: O(nlog2)
+    *   Time  complexity: O(nlogn)
     *   Space complexity: O(log(n))
     */
      public static  int javaSort(int[] nums) {
