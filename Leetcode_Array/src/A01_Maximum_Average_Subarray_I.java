@@ -24,9 +24,9 @@ public class A01_Maximum_Average_Subarray_I {
 
         int[] ss = {1, 12, -5, -6, 50, 3};
 
-        System.out.println("BruteForce:" + BruteForce(ss, 4));
+//        System.out.println("BruteForce:" + BruteForce(ss, 4));
         System.out.println("CumulativeSum:" + CumulativeSum(ss,4));
-        System.out.println("slidingWindow:" + slidingWindow(ss,4));
+//        System.out.println("slidingWindow:" + slidingWindow(ss,4));
     }
 
     /*
@@ -64,7 +64,7 @@ public class A01_Maximum_Average_Subarray_I {
         int[] sum = new int[nums.length];
         sum[0] = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            sum[i] += nums[i] + sum[i - 1];
+            sum[i] = nums[i] + sum[i - 1];
         }
 
 

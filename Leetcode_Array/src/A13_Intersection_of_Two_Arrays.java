@@ -26,6 +26,14 @@ public class A13_Intersection_of_Two_Arrays {
         int[] res = intersection(nums1,nums2);
         System.out.println(Arrays.toString(res));
     }
+    /**
+     *    使用了sort语法，时间复杂度为O(nlogn)
+     *
+     *    两个数组排序，然后遍历一次循环
+     *
+     *   Time  complexity: nlogN
+     *   Space complexity:
+    */
     public  static  int[] intersection(int[] nums1, int[] nums2) {
 
 //        List<Integer>  list = new LinkedList<>(); // 不用链表，防止加入重复元素
@@ -52,6 +60,38 @@ public class A13_Intersection_of_Two_Arrays {
        }
         return res;
     }
+
+    /**
+     *
+     *   数组转成set，使用set.contains的方法判断是否包含
+     *
+     *   Time  complexity: O(nlogn)
+     *   Space complexity:
+    */
+    public  static  int[] intersectionTwo(int[] nums1, int[] nums2) {
+
+//        List<Integer>  list = new ArrayList<>(); // 不用链表，防止加入重复元素
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> resSet = new HashSet<>();
+
+        for (int i = 0; i < nums1.length; i++){
+            set.add(nums1[i]);
+        }
+
+        for (int i = 0; i < nums2.length; i++){
+            if (set.contains(nums2[i])){
+                resSet.add(nums2[i]);
+            }
+        }
+        int[] resArr = new int[resSet.size()];
+        int k = 0;
+        for (int num : resSet){
+            resArr[k++] = num;
+        }
+
+        return resArr;
+    }
+
 }
 
 
