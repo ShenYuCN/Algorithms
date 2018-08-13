@@ -1,4 +1,6 @@
+package grammer;
 import java.util.*;
+
 
 /**
  * Created by happiness on 17/10/15.

@@ -20,6 +20,8 @@
  返回对象在堆栈中的位置，以 1 为基数。
 
  */
+package grammer;
+
 import java.util.Stack;
 
 public class Stack_Rule {
