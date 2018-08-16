@@ -15,6 +15,16 @@ import java.util.Arrays;
  Output: 4
  Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
 
+ 最小：Sm = min(a1,b1)+....+ min(an+bn)
+ 数组之和： Sa = a1+b1+ ... + an + bn
+ 假设差值:  d1 = b1-a1   Sd = d1 +....+ dn
+ Sa = b1 - a1 + 2a1  + .....  + bn - an + 2an
+    =  Sd + 2Sm
+
+ Sm = (Sa - Sd)/2
+
+ Sa 确定，Sd最小则Sm最大， 排序后相邻2元素差值最小
+
 
  */
 public class A16_Array_Partition_I {
