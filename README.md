@@ -1,3 +1,2 @@
-
-###leetcode   
-####Java和Python的实现
+leetcode   
+Java和Python的实现
