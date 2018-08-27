@@ -18,10 +18,12 @@ Example 3:
 
 Input: "abcdddeeeeaabbbcd"
 Output: [[3,5],[6,9],[12,14]]
- 
+
 
 Note:  1 <= S.length <= 1000
 '''
+
+import re
 
 
 class Solution:
@@ -30,18 +32,36 @@ class Solution:
         :type S: str
         :rtype: List[List[int]]
         """
-        i,j  = 0,0
-        res =[]
+        i, j = 0, 0
+        res = []
         while j < len(S):
-        	while  j < len(S) and S[i] == S[j]:
-        		j += 1
-        	if j - i >= 3:
-        		res.append([i,j-1])
-        	i = j
+            while j < len(S) and S[i] == S[j]:
+                j += 1
+            if j - i >= 3:
+                res.append([i, j - 1])
+            i = j
         return res
-        		
+
+
+    def finditerSolution(self,S):
+        return re.finditer(r'(\w)\1{2,}',S)
+
+            # pass       return [[r.start(), r.end() - 1] for r in re.finditer(r'(\w)\1{2,}', S)]
+
+
+
+                
 
 so = Solution()
-print(so.largeGroupPositions('abbxxxxzzy'))
+# print(so.largeGroupPositions('abbxxxxzzy'))
+
+print(so.finditerSolution('abbxxxxzzy'))
+
+
+a = 'abbxxxxzzy'
+
+listA = re.finditer(r'(\w)\1{2,}', a)
+print(listA)
+
 
 
