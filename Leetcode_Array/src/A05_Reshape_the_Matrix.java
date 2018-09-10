@@ -4,7 +4,7 @@ import java.util.Queue;
 
 /**
  * Created by happiness on 17/9/19.
- * 重塑模型
+ * 重塑矩阵
  * <p/>
  * <p/>
  * In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
@@ -49,9 +49,11 @@ public class A05_Reshape_the_Matrix {
         int[][] ss = {{1, 2}, {3, 4}};
 
 
-        int[][] res = matrixReshape(ss, 2, 4);
+//        int[][] res = matrixReshape(ss, 2, 4);
+        int[][] res = M__S_matrixReshape(ss, 1, 4);
 
-        System.out.println(ss[1][0]);
+
+//        System.out.println(ss[1][0]);
 
         for (int j = 0; j < res.length; j++) {
             System.out.println("res" + Arrays.toString(res[j]));
@@ -60,55 +62,23 @@ public class A05_Reshape_the_Matrix {
 
     }
 
-    public static int[][] matrixReshape(int[][] nums, int r, int c) {
-        int[] allArr = new int[r * c];
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int[] elementArr = nums[i];
-
-            count += elementArr.length;
-            for (int j = 0; j < elementArr.length; j++) {
-                allArr[i * elementArr.length + j] = elementArr[j];
-            }
-
-        }
-
-        if (count < allArr.length) return nums;
-
-
-        int[][] res = new int[r][c];
-        for (int i = 0; i < r; i++) {
-            int[] temp = new int[c];
-            for (int j = 0; j < c; j++) {
-                temp[j] = allArr[i * c + j];
-            }
-            res[i] = temp;
-        }
-
-        return res;
-    }
-
-    /**
-     * Using Queue
-     * <p/>
-     * <p/>
-     * Time  complexity: O(m*n)
-     * Space complexity: O(m*n) The queue formed will be of size m*n
-     */
-    public static int[][] queue(int[][] nums, int r, int c) {
-
-        if (nums.length == 0 || r * c != nums.length * nums[0].length) return nums;
-
-        int[][] res = new int[r][c];
-
+    /*
+    *    A1: 自己的思路，使用队列，先都取出来，再分配
+    *    Using Queue
+    *
+    *   Time Complexity : O(m*n)
+    *   Space Complexity: O(m*n)  The queue formed will be of size m*n
+    * */
+    public static int[][] M__S_matrixReshape(int[][] nums, int r, int c) {
+        if (r * c != nums.length * nums[0].length) return nums;
         Queue<Integer> queue = new LinkedList<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums[0].length; j++) {
-                queue.add(nums[i][j]);
+        for (int[] row : nums) {
+            for (int i : row) {
+                queue.add(i);
             }
         }
 
+        int[][] res = new int[r][c];
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
                 res[i][j] = queue.remove();
@@ -117,6 +87,41 @@ public class A05_Reshape_the_Matrix {
         return res;
     }
 
+    /*
+    *
+    *   A2:不使用队列，新数组元素直接从给定数组取，通过每行的元素数量叠加
+    *
+    *
+    *   Time Complexity : O(m*n)
+    *   Space Complexity: O(m*n)  The resultant matrix of size m*n is used
+    * */
+    public static int[][] M_matrixReshape(int[][] nums, int r, int c) {
+        if (r * c != nums.length * nums[0].length) return nums;
+
+        int[][] res = new int[r][c];
+        int rows = 0;
+        int cols = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                res[rows][cols] = nums[i][j];
+                cols++;
+                if (cols == c) {
+                    rows++;
+                    cols = 0;
+                }
+            }
+        }
+        return res;
+    }
+
+    /*
+      *
+      *   A3:不使用队列，新数组元素直接从给定数组取,和A2相似，计算方式通过模数运算
+      *
+      *
+      *   Time Complexity : O(m*n)
+      *   Space Complexity: O(m*n)  The resultant matrix of size m*n is used
+      * */
     public static int[][] divisionAndModulus(int[][] nums, int r, int c) {
         if (nums.length == 0 || nums.length * nums[0].length != r * c) return nums;
 
@@ -127,6 +132,26 @@ public class A05_Reshape_the_Matrix {
                 res[count / c][count % c] = nums[i][j];
                 count++;
             }
+        }
+        return res;
+    }
+
+    /*
+   *
+   *   A4: A3的优化，一次循环
+   *
+   *
+   *   Time Complexity : O(m)
+   *   Space Complexity: O(m*n)  The resultant matrix of size m*n is used
+   * */
+    public static int[][] S_divisionAndModulus(int[][] nums, int r, int c) {
+        if (nums.length == 0 || nums.length * nums[0].length != r * c) return nums;
+
+        int n = nums[0].length;
+        int[][] res = new int[r][c];
+        int count = 0;
+        for (int i = 0; i < nums.length * n; i++) {
+            res[i / c][i % c] = nums[i / n][i % n];
         }
 
         return res;

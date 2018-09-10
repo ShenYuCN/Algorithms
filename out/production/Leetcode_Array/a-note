@@ -1,0 +1,26 @@
+
+
+使用栈：
+
+A04_Shortest_Unsorted_Continuous_Subarray
+
+
+
+使用队列：
+
+A05_Reshape_the_Matrix
+
+
+
+使用 Hash Table
+
+A06_Two_Sum
+
+A07_Kdiff_Pairs_in_an_Array
+
+
+
+
+
+Array打印： sys...println(  Array.toString(arr) )
+Map打印：  sn ( map ) 或者 sn( map.toString )

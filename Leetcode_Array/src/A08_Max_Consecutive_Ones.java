@@ -26,15 +26,31 @@ public class A08_Max_Consecutive_Ones {
 
     }
 
+
+    public static int ss_findMaxConsecutiveOnes(int[] nums) {
+        int res = 0;
+        int count = 0;
+        for (int num : nums) {
+            if (num == 1) {
+                count++;
+            } else {
+                count = 0;
+            }
+            res = Math.max(res, count);
+        }
+
+        return res;
+    }
+
     public static int findMaxConsecutiveOnes(int[] nums) {
 
-        Map<Integer,Integer> map  = new HashMap<>();
 
         int now = 0;
         int max = 0;
-        for (int n:nums){
-            max = Math.max(max,now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，不能是i++,或者是 now + 1
-            max = Math.max(max,now = n == 1 ? now + 1: 0);
+        for (int n : nums) {
+            // max = Math.max(max, now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，可以是 now + 1，不能是i++,
+            max = Math.max(max, now = (n == 1 ? now + 1 : 0));
+
 
             /*  解释：
             if (n == 1) now++;
