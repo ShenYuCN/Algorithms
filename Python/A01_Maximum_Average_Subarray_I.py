@@ -9,3 +9,13 @@ Given an array consisting of n integers, find the contiguous subarray of given l
 
 
 '''
+
+class Solution:
+    def arrayPairSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+
+        
