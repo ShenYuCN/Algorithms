@@ -38,13 +38,14 @@ import java.util.Set;
 */
 public class A10_Third_Maximum_Number {
     public static void  main(String args[]){
+
 //        int[] nums = {5,4,3,4};
 //        int[] nums = {1,1,2};
         int[] nums = {1,2};
 //        int[] nums = {1,2,-2147483648};  // -2147483648
 
         System.out.print(excellent_solution(nums));
-//        System.out.print(Integer.MIN_VALUE);
+        System.out.print(Integer.MIN_VALUE);
     }
 
 
@@ -54,23 +55,44 @@ public class A10_Third_Maximum_Number {
 //   使用这个方法无需对于三个以内单独处理，因为三个以内，肯定会只是一个值，那就可以认为是max1,两个值同理有max1
 //        if (nums.length == 1) return nums[0];
 //        if (nums.length == 2) return nums[0] > nums[1] ? nums[0] : nums[1];
-        Integer max1 = null;  // 不能将null赋值给int，要赋值给Integer
+
+//        Integer max1 = null;  // 不能将null赋值给int，要赋值给Integer
+//        Integer max2 = null;
+//        Integer max3 = null;
+//        for (Integer n : nums){
+//
+//            if (n.equals(max1) || n.equals(max2) || n.equals(max3)) continue;   // null 判断要用 equal
+//
+//            if ( max1 == null || n > max1 ){
+//                max3 = max2;
+//                max2 = max1;
+//                max1 = n;
+//            }else if ( max2 == null || n > max2){
+//                max3 = max2;
+//                max2 = n;
+//            }else if (max3 == null || n> max3){
+//                max3 = n;
+//            }
+//        }
+//        return max3 == null ? max1 : max3;
+
+        Integer max1 = null;
         Integer max2 = null;
         Integer max3 = null;
-        for (Integer n : nums){
+        for (Integer x : nums){
+            if (x.equals(max1) || x.equals(max2) || x.equals(max3)) continue;
 
-            if (n.equals(max1) || n.equals(max2) || n.equals(max3)) continue;   // null 判断要用 equal
-
-            if ( max1 == null || n > max1 ){
+            if (x > max1 || max1 == null){
                 max3 = max2;
                 max2 = max1;
-                max1 = n;
-            }else if ( max2 == null || n > max2){
+                max1 = x;
+            }else if(x > max2 || max2 == null){
                 max3 = max2;
-                max2 = n;
-            }else if (max3 == null || n> max3){
-                max3 = n;
+                max2 = x;
+            }else if (x > max3 || max3 == null){
+                max3 = x;
             }
+
         }
         return max3 == null ? max1 : max3;
     }
@@ -88,6 +110,9 @@ public class A10_Third_Maximum_Number {
         if(pq.size() == 2) pq.poll();
         return pq.peek();
     }
+
+
+    /************************** 以下仅作参考，不是答案 ******************************************************************/
     /**
      *
      *   这个方法有个缺陷是默认最低为 Integer.MIN_VALUE

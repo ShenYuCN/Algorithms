@@ -25,7 +25,7 @@ class Solution:
 		O(N^2)
 		思路： 两次循环，外循环取出每一行，内循环先前后翻转，再自己取反
         """
-        return ((1 ^ i for i in row[::-1]) for row in A )
+        return [[1 ^ i for i in row[::-1]] for row in A ]
 
 
         	

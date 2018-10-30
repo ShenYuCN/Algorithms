@@ -17,6 +17,10 @@ import java.util.Arrays;
  Output: [[1,0,0],[0,1,0],[1,1,1]]
  Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].
  Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
+
+ 用python 更简单，左右翻转【::-1】
+ [[1 ^ i for i in row[::-1]] for row in A]
+
  *
  */
 public class A15_Flipping_an_Image {
@@ -44,22 +48,20 @@ public class A15_Flipping_an_Image {
     public  static int[][] S_flipAndInvertImage(int[][] A) {
         int C = A[0].length;
         for (int[] row: A) {
-            System.out.println(Arrays.toString(row));
-
             for (int i = 0; i < (C+1) / 2; ++i) { // 这里一定要走中间那个值，因为中间的值也要做取反操作，如果没带上，结果不对
                 int tmp = row[i];
-                System.out.println(tmp);
                 row[i] = row[C - 1 - i] ^ 1;
                 row[C - 1 - i] = tmp ^ 1;
             }
         }
+
         return A;
     }
     /*
-    * 看不懂
+    * 高赞答案
     * */
     public  static  int[][] A_flipAndInvertImage(int[][] A) {
-        int n = A.length;  // 看不懂
+        int n = A.length;
         System.out.println(n);
 
         for (int[] row : A) {

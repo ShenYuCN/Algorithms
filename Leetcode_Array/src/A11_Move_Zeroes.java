@@ -23,8 +23,8 @@ public class A11_Move_Zeroes {
     public static void  main(String args[]){
         int[] arr = {0,1,0,3,12};
 //        sy(arr);
-//        excellent_solution(arr);
-        so_2(arr);
+        excellent_solution(arr);
+//        so_2(arr);
     }
 
     public  static  void excellent_solution(int[] nums){
@@ -33,9 +33,16 @@ public class A11_Move_Zeroes {
         for (int num : nums){
             if (num != 0) nums[newIndex++] = num;
         }
+        System.out.println(newIndex);
+
         while (newIndex < nums.length){
             nums[newIndex ++] = 0;
         }
+
+        //  或者执行下面的遍历
+//        for (int i = newIndex; i < nums.length; i++){
+//            nums[i] = 0;
+//        }
     }
 
 

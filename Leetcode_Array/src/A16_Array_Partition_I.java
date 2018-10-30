@@ -7,7 +7,8 @@ import java.util.Arrays;
  *
  *
     数组拆分
- Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
+ Given an array of 2n integers, your task is to group these integers into n pairs of integer,
+ say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
 
  Example 1:
  Input: [1,4,3,2]
@@ -24,6 +25,8 @@ import java.util.Arrays;
  Sm = (Sa - Sd)/2
 
  Sa 确定，Sd最小则Sm最大， 排序后相邻2元素差值最小
+
+ https://leetcode.com/problems/array-partition-i/discuss/102170/Java-Solution-Sorting.-And-rough-proof-of-algorithm.
 
 
  */
