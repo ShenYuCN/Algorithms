@@ -44,6 +44,11 @@ public class Stack_Rule {
 
         System.out.println("stack: " +  stack);
 
-
+//        stack: [1, 2, 3, 4]
+//        peek：4
+//        stack：[1, 2, 3, 4]
+//        pop:4
+//        pop:3
+//        stack: [1, 2]
     }
 }

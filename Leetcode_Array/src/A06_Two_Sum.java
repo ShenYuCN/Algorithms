@@ -62,13 +62,14 @@ public class A06_Two_Sum {
         }
 
         for (int i = 0; i < nums.length; i++){
-            int complement = target - nums[i];
-            if (map.containsKey(complement) && i != map.get(complement)){
+            int complement = target - nums[i];   // [2, 7, 11, 15]  9    9-2 = 7
+            if (map.containsKey(complement) && i != map.get(complement)){  // 每个元素只能用一次
                 return new  int[] {i,map.get(complement)};
             }
         }
 
         throw new IllegalArgumentException("No solution");
+
     }
 
 

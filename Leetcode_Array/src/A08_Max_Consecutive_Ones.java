@@ -21,7 +21,6 @@ public class A08_Max_Consecutive_Ones {
     public static void main(String args[]) {
 
         int[] nums = {1, 3, 1, 15};
-//        System.out.println((kdiff(nums, 2)));
         System.out.println((findMaxConsecutiveOnes(nums)));
 
     }
@@ -49,17 +48,30 @@ public class A08_Max_Consecutive_Ones {
         int max = 0;
         for (int n : nums) {
             // max = Math.max(max, now = n == 0 ? 0 : ++now); // ++NOW 先赋值，再使用，可以是 now + 1，不能是i++,
+
+
             max = Math.max(max, now = (n == 1 ? now + 1 : 0));
+
+//            三元复杂表达式，还是用N + 1，避免使用N++或者++N
+//            max = Math.max(max, now = (n == 1 ? ++now : 0));
 
 
             /*  解释：
             if (n == 1) now++;
             else now = 0;
-            res = Math.max(max,now);
+            max = Math.max(max, now);
+
+
+
+            if (n == 1) {
+                now++;
+            } else {
+                now = 0;
+            }
+            max = Math.max(max, now);
             */
         }
         return max;
-
 
     }
 

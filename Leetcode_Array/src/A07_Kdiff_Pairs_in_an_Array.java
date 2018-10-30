@@ -1,3 +1,5 @@
+import com.sun.tools.javac.util.Log;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,12 +40,45 @@ public class A07_Kdiff_Pairs_in_an_Array {
 //        int[] nums = {1, 3, 1, 15};
         int[] nums = {3, 1, 4, 1, 5};
 //        System.out.println((kdiff(nums, 2)));
-        System.out.println((kdiff(nums, 0)));
+//        System.out.println((kdiff(nums, 0)));
 
-        System.out.println((findPairs(nums, 0)));
+        System.out.println((findPairs(nums, 1)));
 
     }
 
+    /**
+     *  更容易理解
+     *  map： key为元素，值为1（相同的key的话值会增加 >=2，getOrDefault）
+     *
+     *
+     *   Time  complexity: O(n)
+     *   Space complexity:
+     */
+    public static  int findPairs(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k < 0)   return 0;
+
+        Map<Integer, Integer> map = new HashMap<>();
+        int count = 0;
+        for (int i : nums) {
+            map.put(i, map.getOrDefault(i, 0) + 1); // {3, 1, 4, 1, 5}  --》 {1=2, 3=1, 4=1, 5=1}
+        }
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (k == 0) {
+                //count how many elements in the array that appear more than twice.
+                if (entry.getValue() >= 2) {
+                    count++;
+                }
+            } else {
+                if (map.containsKey(entry.getKey() + k)) {
+                    count++;
+                }
+            }
+        }
+
+
+        return count;
+    }
 
 
     public  static  int  kdiff(int[] nums,int k){
@@ -70,40 +105,6 @@ public class A07_Kdiff_Pairs_in_an_Array {
         return res;
 
 
-    }
-    /**
-     *  更容易理解
-     *  map： key为元素，值为1（相同的key的话值会增加 >=2，getOrDefault）
-     *
-     *
-     *   Time  complexity: O(n)
-     *   Space complexity:
-    */
-    public static  int findPairs(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k < 0)   return 0;
-
-        Map<Integer, Integer> map = new HashMap<>();
-        int count = 0;
-        for (int i : nums) {
-            map.put(i, map.getOrDefault(i, 0) + 1);
-        }
-
-        System.out.println(map);
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (k == 0) {
-                //count how many elements in the array that appear more than twice.
-                if (entry.getValue() >= 2) {
-                    count++;
-                }
-            } else {
-                if (map.containsKey(entry.getKey() + k)) {
-                    count++;
-                }
-            }
-        }
-
-        return count;
     }
 
 }

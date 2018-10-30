@@ -7,10 +7,13 @@ import java.util.Queue;
  * 重塑矩阵
  * <p/>
  * <p/>
- * In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
- * You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
+ * In MATLAB, there is a very useful function called 'reshape',
+ * which can reshape a matrix into a new one with different size but keep its original data.
+ * You're given a matrix represented by a two-dimensional array,
+ * and two positive integers r and c representing the row number and column number of the wanted reshaped matrix,respectively.
  * The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
- * If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+ * If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix;
+ * Otherwise, output the original matrix.
  * Example 1:
  * Input:
  * <p/>
@@ -50,9 +53,7 @@ public class A05_Reshape_the_Matrix {
 
 
 //        int[][] res = matrixReshape(ss, 2, 4);
-        int[][] res = M__S_matrixReshape(ss, 1, 4);
-
-
+        int[][] res = S_divisionAndModulus(ss, 1, 4);
 //        System.out.println(ss[1][0]);
 
         for (int j = 0; j < res.length; j++) {
@@ -61,6 +62,24 @@ public class A05_Reshape_the_Matrix {
         }
 
     }
+    /*
+ *
+ *   A4: A3的优化，一次循环
+ *
+ *
+ *   Time Complexity : O(m)
+ *   Space Complexity: O(m*n)  The resultant matrix of size m*n is used
+ * */
+    public static int[][] S_divisionAndModulus(int[][] nums, int r, int c) {
+        if (nums.length == 0 || nums.length * nums[0].length != r *c ) return nums;
+        int n = nums[0].length;
+        int[][] res = new int[r][c];
+        for (int i = 0; i < nums.length * n; i ++){
+            res[i/c][i%c] = nums[i/n][i%n];
+        }
+        return res;
+    }
+
 
     /*
     *    A1: 自己的思路，使用队列，先都取出来，再分配
@@ -136,24 +155,5 @@ public class A05_Reshape_the_Matrix {
         return res;
     }
 
-    /*
-   *
-   *   A4: A3的优化，一次循环
-   *
-   *
-   *   Time Complexity : O(m)
-   *   Space Complexity: O(m*n)  The resultant matrix of size m*n is used
-   * */
-    public static int[][] S_divisionAndModulus(int[][] nums, int r, int c) {
-        if (nums.length == 0 || nums.length * nums[0].length != r * c) return nums;
 
-        int n = nums[0].length;
-        int[][] res = new int[r][c];
-        int count = 0;
-        for (int i = 0; i < nums.length * n; i++) {
-            res[i / c][i % c] = nums[i / n][i % n];
-        }
-
-        return res;
-    }
 }
