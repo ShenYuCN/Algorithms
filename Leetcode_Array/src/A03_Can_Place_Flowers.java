@@ -37,6 +37,7 @@ public class A03_Can_Place_Flowers {
 
     public static boolean canPlaceFlowers(int[] flowerbed, int n) {
 
+        // 如果只有一个花盆，只能放一个
         if (flowerbed.length == 1 && flowerbed[0] == 0 && n <= 1) {
 
             return true;
@@ -44,6 +45,10 @@ public class A03_Can_Place_Flowers {
 
         int x = 0;
         for (int i = 0; i < flowerbed.length; i++) {
+
+            // 不是边界，并且前后有空位  +1
+            // 是左边界，第一第二个盆都是空的 +1
+            // 是右边界，最后一个，最后两个都是空的
 
             if (
                     (i != flowerbed.length - 1 && i != 0 && flowerbed[i] == 0 && flowerbed[i + 1] == 0 && flowerbed[i - 1] == 0)

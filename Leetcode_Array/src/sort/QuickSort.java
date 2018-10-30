@@ -24,21 +24,21 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-        public static  int partition(int[] sortArray, int low, int height) {
-            System.out.println("\n" + "low:" + low + "  height:" + height);
+        public static  int partition(int[] sortArray, int low, int high) {
+            System.out.println("\n" + "low:" + low + "  high:" + high);
 
             int key = sortArray[low];   // 刚开始以第一个数为标志数据
-            while (low < height) {
-                while (low < height && sortArray[height] >= key)
-                    height--;                                       // 从后面开始找，找到比key值小的数为止
+            while (low < high) {
+                while (low < high && sortArray[high] >= key)
+                    high--;                                       // 从后面开始找，找到比key值小的数为止
 
-                sortArray[low] = sortArray[height];                   // 将该数放到key值的左边
+                sortArray[low] = sortArray[high];                   // 将该数放到key值的左边
 
 
-                while (low < height && sortArray[low] <= key)
+                while (low < high && sortArray[low] <= key)
                     low++;                                           // 从前面开始找，找到比key值大的数为止
 
-                sortArray[height] = sortArray[low];                 // 将该数放到key值的右边
+                sortArray[high] = sortArray[low];                 // 将该数放到key值的右边
 
             }
 
@@ -50,11 +50,11 @@ public class QuickSort {
         }
 
 
-        public  static void mySort(int[] sortArray, int low, int height) {
-            if (low < height) {
-                int result = partition(sortArray, low, height);
+        public  static void mySort(int[] sortArray, int low, int high) {
+            if (low < high) {
+                int result = partition(sortArray, low, high);
                 mySort(sortArray, low, result - 1);
-                mySort(sortArray, result + 1, height);
+                mySort(sortArray, result + 1, high);
             }
         }
 
