@@ -1,3 +1,4 @@
+package Array;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +45,7 @@ public class A17_Positions_of_Large_Groups {
     }
 
     public static List<List<Integer>> largeGroupPositions(String S) {
-        
+
         int i = 0, j = 0, N = S.length();
         List<List<Integer>> res = new ArrayList<>();
         while (j < N){
