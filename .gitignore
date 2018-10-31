@@ -4,3 +4,5 @@ workspace.xml
 *.class
 *.iml
 *.name
+.idea/
+out/
