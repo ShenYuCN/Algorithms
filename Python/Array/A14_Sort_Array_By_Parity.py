@@ -35,5 +35,20 @@ def m_sortArrayByParity(A):
     return A 
 
 
+def sortArrayByParity(self, A):
+	"""
+		这种思路在于先翻转，再从前往后，从后往前判断。三个if
+	"""
+    i, j = 0, len(A) - 1
+    while i < j:
+        if A[i] % 2 > A[j] % 2:
+            A[i], A[j] = A[j], A[i]
+
+        if A[i] % 2 == 0: i += 1
+        if A[j] % 2 == 1: j -= 1
+
+    return A
+
+
 arr = [3,2,1,4]
 print(m_sortArrayByParity(arr))
