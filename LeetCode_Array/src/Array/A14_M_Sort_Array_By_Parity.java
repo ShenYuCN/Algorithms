@@ -33,6 +33,7 @@ public  class A14_M_Sort_Array_By_Parity {
 //        int[] arr = {6, 4, 2, 3, 5, 7, 0, 1};
         int[] arr = {3, 1, 2, 4};
         sortArrayByParity(arr);
+        System.out.print(Arrays.toString(arr));
 
     }
 
