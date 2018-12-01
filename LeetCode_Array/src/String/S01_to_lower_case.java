@@ -10,7 +10,7 @@ public class S01_to_lower_case {
         System.out.println(toLowerCase(str));
 
     }
-    public static  String toLowerCase(String str) {
+    public  static String toLowerCase(String str) {
         char[] a = str.toCharArray();
 
         for (int i = 0; i < a.length; i++)
